@@ -64,8 +64,19 @@ BUILD_IGNORE
 Usage
 =====
 
+build2s3
+--------
+
 To use it, run the `build2s3` management command::
 	
 	python manage.py build2s3
 	
 It should show a listing of files it is including then it will start uploading to s3.
+
+version url
+-----------
+
+If the `urls.py` was updated to include the build app, then after running build2s3
+you should be able to access the version at `/build/version/`
+
+Note: This assumes that your template directory is `templates` on your project root.
