@@ -1,9 +1,9 @@
 ============
-Django Build
+django-build
 ============
 
-Django Build provides mainly a management command 'build2s3' which
-tar and gzips the source code and stores it in s3. Other features 
+django-build provides a management command 'build2s3' which labels,
+tars and then gzips the source code and stores it in s3. Other features 
 include a url to get the current version and some middleware which 
 puts the version in the http headers.
 
@@ -79,4 +79,11 @@ version url
 If the `urls.py` was updated to include the build app, then after running build2s3
 you should be able to access the version at `/build/version/`
 
-Note: This assumes that your template directory is `templates` on your project root.
+Note: This assumes that your template directory is `templates` on your project root 
+as a VERSION.txt file is written there.
+
+License
+=======
+
+This software is provided under the MIT License. For more details please see the
+LICENSE file that is included with the source code.
