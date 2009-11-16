@@ -80,7 +80,7 @@ If the `urls.py` was updated to include the build app, then after running build2
 you should be able to access the version at `/build/version/`
 
 Note: This assumes that your template directory is `templates` on your project root 
-as a VERSION.txt file is written there.
+as a VERSION.txt file gets written there.
 
 License
 =======
