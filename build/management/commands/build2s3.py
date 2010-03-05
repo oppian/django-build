@@ -23,6 +23,8 @@ try:
 except ImportError:
     raise ImportError, "The boto Python library is not installed."
 
+IGNORE_DIRS = getattr(settings, 'BUILD_IGNORE', ('tmp',))
+
 def get_base_dir():
     return get_project_root()
 
@@ -40,7 +42,7 @@ def list_files(dir, file_list):
             continue
         fullname = os.path.join(dir, filename)
         # test if in ignore
-        if fullname in settings.BUILD_IGNORE:
+        if fullname in IGNORE_DIRS:
             continue
         if os.path.isdir(fullname):
             filecount = filecount + list_files(fullname, file_list)
