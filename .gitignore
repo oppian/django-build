@@ -1,6 +1,5 @@
 .project
 .pydevproject
-build
 django_build.egg-info
 *.pyc
 pip-log.txt
